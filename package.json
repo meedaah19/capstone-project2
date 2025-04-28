@@ -1,0 +1,17 @@
+{
+  "name": "capstone-project2",
+  "version": "1.0.0",
+  "description": "An open UV api that locate user location and tell them if they should use sun-screen or not",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hameedat",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
