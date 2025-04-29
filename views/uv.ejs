@@ -16,12 +16,12 @@
         <h3>Sunset: <%= locals.sunset %></h3>
         <h4>Safe Exposure Times:</h4>
         <ul>
-            <li>Skin Type 1: <%= data.safe_exposure_time.st1 %> minutes</li>
-            <li>Skin Type 2: <%= data.safe_exposure_time.st2 %> minutes</li>
-            <li>Skin Type 3: <%= data.safe_exposure_time.st3 %> minutes</li>
-            <li>Skin Type 4: <%= data.safe_exposure_time.st4 %> minutes</li>
-            <li>Skin Type 5: <%= data.safe_exposure_time.st5 %> minutes</li>
-            <li>Skin Type 6: <%= data.safe_exposure_time.st6 %> minutes</li>
+            <li>Skin Type 1: Very fair, red/blonde hair, freckles. Time Before Burn: <%= data.safe_exposure_time.st1 %> minutes. Extreme caution – burn almost immediately</li>
+            <li>Skin Type 2: Fair skin, burns easily. Time Before Burn: <%= data.safe_exposure_time.st2 %> minutes. Use sunscreen, avoid midday sun</li>
+            <li>Skin Type 3: Light to light brown skin. Time Before Burn: <%= data.safe_exposure_time.st3 %> minutes. Sunscreen and shade highly recommended</li>
+            <li>Skin Type 4: Olive or medium brown skin. Time Before Burn: <%= data.safe_exposure_time.st4 %> minutes. Still at risk, especially face/shoulders</li>
+            <li>Skin Type 5: Dark brown skin. Time Before Burn: <%= data.safe_exposure_time.st5 %> minutes. Lower risk, but UV damage still occurs</li>
+            <li>Skin Type 6: Deeply pigmented dark skin. Time Before Burn: <%= data.safe_exposure_time.st6 %> minutes. Least risk of burning, but sunscreen still advised for long exposure</li>
         </ul>
     <% } else if(locals.error){ %>
             <%= error %>
