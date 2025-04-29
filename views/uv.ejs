@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open UV</title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+    <% if(locals.data){ %>
+        <h1>UV Index: <%= locals.uvIndex %> (<%= uvLevel %>) </h1>
+        <h2>Current UV Today: <%= locals.uvMaxIndex %> at <%= locals.maxUV %></h2>
+
+        <h3>Sunrise: <%=locals.sunrise%></h3>
+        <h3>Sunset: <%= locals.sunset %></h3>
+        <h4>Safe Exposure Times:</h4>
+        <ul>
+            <li>Skin Type 1: <%= data.safe_exposure_time.st1 %> minutes</li>
+            <li>Skin Type 2: <%= data.safe_exposure_time.st2 %> minutes</li>
+            <li>Skin Type 3: <%= data.safe_exposure_time.st3 %> minutes</li>
+            <li>Skin Type 4: <%= data.safe_exposure_time.st4 %> minutes</li>
+            <li>Skin Type 5: <%= data.safe_exposure_time.st5 %> minutes</li>
+            <li>Skin Type 6: <%= data.safe_exposure_time.st6 %> minutes</li>
+        </ul>
+    <% } else if(locals.error){ %>
+            <%= error %>
+        <% } %>
+            
+        <%- include('partials/footer.ejs') %>
+</body>
+</html>
