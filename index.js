@@ -1,5 +1,6 @@
 import express from 'express';
 import axios from 'axios';
+import { readFile } from 'fs/promises'
 
 const app = express();
 const port = 3000;
@@ -19,7 +20,7 @@ app.get('/', async(req, res) => {
         res.render('index.ejs', {data: result.data});
     }catch (error){
         console.error('Error fetching data from OpenUV API:', error);
-        res.status(500).send('index.ejs', {error: 'Error fetching data from OpenUV API'});
+        res.status(500)('index.ejs', {error: 'Error fetching data from OpenUV API'});
     }
 })
 

@@ -6,6 +6,28 @@
     <title>Open UV</title>
 </head>
 <body>
-    <h2>hello meedah</h2>
+    <%- include('partials/header.ejs') %>
+    
+    <% if(locals.data){ %>
+        <h1>UV Index: <%= data.uv %></h1>
+        <h2>Max UV Today: <%= data.uv_max %> at <%= data.uv_max_time %></h2>
+
+        <h3>Sunrise: <%= data.sun_info.sun_times.sunrise %></h3>
+        <h3>Sunset: <%= data.sun_info.sun_times.sunset %></h3>
+
+        <h4>Safe Exposure Times:</h4>
+        <ul>
+            <li>Skin Type 1: <%= data.safe_exposure_time.st1 %> minutes</li>
+            <li>Skin Type 2: <%= data.safe_exposure_time.st2 %> minutes</li>
+            <li>Skin Type 3: <%= data.safe_exposure_time.st3 %> minutes</li>
+            <li>Skin Type 4: <%= data.safe_exposure_time.st4 %> minutes</li>
+            <li>Skin Type 5: <%= data.safe_exposure_time.st5 %> minutes</li>
+            <li>Skin Type 6: <%= data.safe_exposure_time.st6 %> minutes</li>
+        </ul>
+    <% } else{ %>
+            <p>Loading UV Data</p>
+        <% } %>
+            
+        <%- include('partials/footer.ejs') %>
 </body>
 </html>
