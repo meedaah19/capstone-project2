@@ -64,7 +64,6 @@ app.post('/uv', async(req, res) => {
             maxUV: formattedMaxUV,
         });
     }catch (error){
-        console.error('Error fetching data from OpenUV API:', error);
         res.status(500).render('uv.ejs', {error: 'Error fetching data from OpenUV API'});
     }
 })

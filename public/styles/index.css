@@ -8,21 +8,50 @@ body{
 }
  .button{
     padding: 15px;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 5px;
     border-color: white;
     cursor: pointer;
+    background-color: white;
  }
 
  .container{
     background-color: rgb(27, 2, 2);
     width: 50%;
-    margin-top: 50px auto;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: inline-block;
     justify-content: center;
-
-
  }
+
+ .skin-list{
+    list-style: none;
+    text-align: left;
+    line-height: 35px;
+    font-size: 22px;
+    color: rgb(187, 19, 19);
+}
+.skin-list span{
+    font-size: 30px;
+    color:white
+}
+
+.div-box{
+    background-color: rgb(27, 2, 2);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.div-box h4{
+    color: white;
+    font-size: 30px;
+}
+
+.footer{
+    color: rgb(27, 2, 2);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
