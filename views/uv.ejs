@@ -19,6 +19,7 @@
         <% } %>
     </div>
     <div class="div-box" >
+        <% if(locals.data){ %>
     <h4>Safe Exposure Times:</h4>
         <ul class="skin-list">
             <li><span>Skin Type 1:</span> Very fair, red/blonde hair, freckles. <span>Time Before Burn:</span> <%= data.safe_exposure_time.st1 %> minutes. Extreme caution, burn almost immediately</li>
@@ -28,6 +29,9 @@
             <li><span>Skin Type 5:</span> Dark brown skin. <span>Time Before Burn:</span> <%= data.safe_exposure_time.st5 %> minutes. Lower risk, but UV damage still occurs</li>
             <li><span>Skin Type 6:</span> Deeply pigmented dark skin. <span>Time Before Burn:</span> <%= data.safe_exposure_time.st6 %> minutes. Least risk of burning, but sunscreen still advised for long exposure</li>
         </ul>
+        <% }else { %>
+            <p>UV data not available. Please try again.</p>
+          <% } %>
     </div>
             
         <%- include('partials/footer.ejs') %>
