@@ -1,3 +1,29 @@
 body{
-    background-color: rgb(218, 218, 231);
+    background-image: url('../images/pexels-fotios-photos-1048273.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-size: 23px;
+    color: white;
 }
+ .button{
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    border-color: white;
+    cursor: pointer;
+ }
+
+ .container{
+    background-color: rgb(27, 2, 2);
+    width: 50%;
+    margin-top: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+ }

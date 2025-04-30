@@ -4,10 +4,11 @@
   <title>UV Info by Location</title>
 </head>
 <body>
+  <div class="container">
     <%- include('partials/header.ejs') %>
 
-  <h1>UV Index Checker</h1>
-  <button onclick="getLocation()">Get My UV Info</button>
+  <h1 class="white">UV Index Checker</h1>
+  <button class="button" onclick="getLocation()">Get My UV Info</button>
 
   <form id="locationForm" action="/uv" method="POST" style="display: none;">
     <input type="hidden" name="lat" id="lat">
@@ -29,8 +30,8 @@
       }
     }
   </script>
+</div>
 
 <%- include('partials/footer.ejs') %>
-
 </body>
 </html>
