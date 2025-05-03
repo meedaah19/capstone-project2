@@ -6,7 +6,11 @@
     <title>Open UV</title>
 </head>
 <body>
+    <!-- header -->
     <%- include('partials/header.ejs') %>
+    <!-- end of header -->
+
+    <!-- uv index -->
     <div class="container">
     <% if(locals.data){ %>
         <h1>UV Index: <%= locals.uvIndex %> (<%= uvLevel %>) </h1>
@@ -20,6 +24,10 @@
     </div>
     <div class="div-box" >
         <% if(locals.data){ %>
+
+    <!-- end of uv index -->
+
+    <!-- safe time to every skin type -->
     <h4>Safe Exposure Times:</h4>
         <ul class="skin-list">
             <li><span>Skin Type 1:</span> Very fair, red/blonde hair, freckles. <span>Time Before Burn:</span> <%= data.safe_exposure_time.st1 %> minutes. Extreme caution, burn almost immediately</li>
@@ -32,8 +40,12 @@
         <% }else { %>
             <p>UV data not available. Please try again.</p>
           <% } %>
+        <!-- end safe time to every skin type -->
+
     </div>
             
+    <!-- footer -->
         <%- include('partials/footer.ejs') %>
+    <!-- end of footer -->
 </body>
 </html>

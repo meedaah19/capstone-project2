@@ -4,7 +4,11 @@
   <title>UV Info by Location</title>
 </head>
 <body>
+  <!-- header -->
     <%- include('partials/header.ejs') %>
+  <!-- end of header -->
+
+  <!-- uv location button -->
     <div class="container">
   <h1 class="white">UV Index Checker</h1>
   <button class="button" onclick="getLocation()">Get My UV Info</button>
@@ -13,7 +17,9 @@
     <input type="hidden" name="lat" id="lat">
     <input type="hidden" name="lng" id="lng">
   </form>
+ <!-- end uv location button -->
 
+  <!-- location access -->
   <script>
     function getLocation() {
       if (navigator.geolocation) {
@@ -29,8 +35,11 @@
       }
     }
   </script>
+  <!-- end of location access -->
 </div>
 
+<!-- footer -->
 <%- include('partials/footer.ejs') %>
+<!-- end of footer -->
 </body>
 </html>
